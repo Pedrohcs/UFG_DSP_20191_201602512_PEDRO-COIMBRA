@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Crud crud = new Crud();
         String resultado;
 
@@ -19,5 +19,9 @@ public class Main {
         System.out.println("\nNovas informações contidas no arquivo: \n");
         resultado = manipular.read();
         System.out.println(resultado);
+
+        System.out.println("\nArquivo CSV: \n");
+        CSV csv = new CSV();
+        csv.init();
     }
 }

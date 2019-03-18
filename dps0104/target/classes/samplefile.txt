@@ -1,5 +1,4 @@
 Olá, este arquivo foi criado
-
 Primeira linha
 Segunda Linha
 Terceira Linha

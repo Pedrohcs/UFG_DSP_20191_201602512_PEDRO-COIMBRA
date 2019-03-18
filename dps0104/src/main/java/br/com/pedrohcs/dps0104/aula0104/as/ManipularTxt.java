@@ -6,7 +6,7 @@ public class ManipularTxt {
 
     private String filename;
 
-    public ManipularTxt(String filename){
+    public ManipularTxt(String filename) {
         this.filename = filename;
         FileReader fileRead = null;
         FileWriter fileWrite = null;
@@ -33,7 +33,7 @@ public class ManipularTxt {
         }
     }
 
-    public String read(){
+    public String read() {
         Crud crud = new Crud();
         return crud.getString(this.filename);
 
