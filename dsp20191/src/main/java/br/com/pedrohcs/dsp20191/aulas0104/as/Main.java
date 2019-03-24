@@ -1,6 +1,4 @@
-package br.com.pedrohcs.dps0104.aula0104.as;
-
-import java.io.IOException;
+package br.com.pedrohcs.dsp20191.aulas0104.as;
 
 public class Main {
 
