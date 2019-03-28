@@ -14,5 +14,7 @@ public class Main {
 
         EditarXml editarXml = new EditarXml();
         editarXml.alterar();
+        System.out.println("Informações do aluno Pedro Henrique Alterada (XML): ");
+        editarXml.ler();
     }
 }
