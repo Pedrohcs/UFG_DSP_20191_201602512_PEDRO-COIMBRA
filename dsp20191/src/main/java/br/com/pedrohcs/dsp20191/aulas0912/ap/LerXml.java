@@ -11,15 +11,15 @@ import org.dom4j.io.SAXReader;
 
 public class LerXml {
 
-    public static void ler (){
+    public static void ler() {
         try {
             File inputFile = new File("src/main/resources/students.xml");
             SAXReader reader = new SAXReader();
-            Document document = reader.read( inputFile );
+            Document document = reader.read(inputFile);
 
             Element classElement = document.getRootElement();
 
-            List<Node> nodes = document.selectNodes("/class/student" );
+            List<Node> nodes = document.selectNodes("/class/student");
             System.out.println("----------------------------");
 
             for (Node node : nodes) {
@@ -34,11 +34,11 @@ public class LerXml {
 
                 List<Node> aulas = node.selectSingleNode("frequencia").selectNodes("aulas");
 
-                for (Node aula : aulas){
+                for (Node aula : aulas) {
                     System.out.println("Frequencia da aula " + aula.valueOf("@numero")
-                        + ": " + aula.getText());
+                            + ": " + aula.getText());
                 }
-                
+
                 System.out.println("----------------------------");
 
             }
