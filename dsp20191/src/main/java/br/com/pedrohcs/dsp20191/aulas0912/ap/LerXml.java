@@ -31,11 +31,15 @@ public class LerXml {
                         + node.selectSingleNode("lastname").getText());
                 System.out.println("Nickname: "
                         + node.selectSingleNode("nickname").getText());
-                System.out.println("Frequencia: "
-                        + node.selectSingleNode("frequencia").getText());
 
-                List<Node> aulas = document.selectNodes("/class/student/frequencia/aulas" );
-                List<Node> freqs = document.selectNodes("/class/student/frequencia");
+                List<Node> aulas = node.selectSingleNode("frequencia").selectNodes("aulas");
+
+                for (Node aula : aulas){
+                    System.out.println("Frequencia da aula " + aula.valueOf("@numero")
+                        + ": " + aula.getText());
+                }
+                
+                System.out.println("----------------------------");
 
             }
         } catch (DocumentException e) {
