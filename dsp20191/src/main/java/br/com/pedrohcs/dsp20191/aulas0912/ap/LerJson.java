@@ -1,5 +1,8 @@
 package br.com.pedrohcs.dsp20191.aulas0912.ap;
 
+import br.com.pedrohcs.dsp20191.aulas0912.ap.classesJson.Aluno;
+import br.com.pedrohcs.dsp20191.aulas0912.ap.classesJson.Aula;
+import br.com.pedrohcs.dsp20191.aulas0912.ap.classesJson.Ufg;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

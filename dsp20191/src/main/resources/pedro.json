@@ -1,0 +1,18 @@
+{
+  "matricula": "201602512",
+  "firstname": "PEDRO HENRIQUE",
+  "lastname": "SILVA",
+  "nickname": "pedro.silva",
+  "frequencia": {
+    "aulas": [
+      {
+        "numero": "0104",
+        "freq": "P"
+      },
+      {
+        "numero": "0508",
+        "freq": "P"
+      }
+    ]
+  }
+}

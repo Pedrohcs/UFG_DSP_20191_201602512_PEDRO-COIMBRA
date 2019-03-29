@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class><student><matricula>201602512</matricula><firstname>PEDRO HENRIQUE</firstname><lastname>SILVA</lastname><nickname>pedro.silva</nickname><frequencia><aulas numero="0104">P</aulas><aulas numero="0508">P</aulas></frequencia></student></class>
+<class>
+    <student>
+        <matricula>201602512</matricula>
+        <firstname>PEDRO HENRIQUE</firstname>
+        <lastname>SILVA</lastname>
+        <nickname>pedro.silva</nickname>
+        <frequencia>
+            <aulas numero="0104">P</aulas>
+            <aulas numero="0508">P</aulas>
+        </frequencia>
+    </student>
+</class>
