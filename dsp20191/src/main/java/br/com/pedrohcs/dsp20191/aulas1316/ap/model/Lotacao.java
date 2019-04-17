@@ -9,17 +9,19 @@ public class Lotacao {
     private Date dataFinal;
     private Cargo cargo;
     private Departamento departamento;
+    private Funcionario funcionario;
 
-    public Lotacao(long id, Date dataInicial, Date dataFinal, Cargo cargo, Departamento departamento){
+    public Lotacao(long id, Date dataInicial, Date dataFinal, Cargo cargo, Departamento departamento, Funcionario funcionario){
         this.id = id;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
         this.cargo = cargo;
         this.departamento = departamento;
+        this.funcionario = funcionario;
     }
 
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(long id) {
@@ -27,7 +29,7 @@ public class Lotacao {
     }
 
     public Date getDataInicial() {
-        return this.dataInicial;
+        return dataInicial;
     }
 
     public void setDataInicial(Date dataInicial) {
@@ -35,7 +37,7 @@ public class Lotacao {
     }
 
     public Date getDataFinal() {
-        return this.dataFinal;
+        return dataFinal;
     }
 
     public void setDataFinal(Date dataFinal) {
@@ -43,7 +45,7 @@ public class Lotacao {
     }
 
     public Cargo getCargo() {
-        return this.cargo;
+        return cargo;
     }
 
     public void setCargo(Cargo cargo) {
@@ -51,10 +53,18 @@ public class Lotacao {
     }
 
     public Departamento getDepartamento() {
-        return this.departamento;
+        return departamento;
     }
 
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 }

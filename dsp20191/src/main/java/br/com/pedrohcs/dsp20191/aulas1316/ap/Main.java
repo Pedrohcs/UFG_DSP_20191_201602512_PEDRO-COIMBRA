@@ -3,6 +3,7 @@ package br.com.pedrohcs.dsp20191.aulas1316.ap;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.model.Cargo;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.model.Departamento;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.model.Funcionario;
+import br.com.pedrohcs.dsp20191.aulas1316.ap.model.Lotacao;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.criacao.CriarTabelaCargo;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.criacao.CriarTabelaDepartamento;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.criacao.CriarTabelaFuncionario;
@@ -10,8 +11,11 @@ import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.criacao.CriarTabelaLot
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.insert.InsertCargo;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.insert.InsertDepartamento;
 import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.insert.InsertFuncionario;
+import br.com.pedrohcs.dsp20191.aulas1316.ap.persistencia.insert.InsertLotacao;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
 
@@ -33,6 +37,7 @@ public class Main {
         InsertCargo insertCargo = new InsertCargo();
         InsertDepartamento insertDepartamento = new InsertDepartamento();
         InsertFuncionario insertFuncionario = new InsertFuncionario();
+        InsertLotacao insertLotacao = new InsertLotacao();
 
         ArrayList<Cargo> cargos = new ArrayList<Cargo>();
         long id = 100;
@@ -74,6 +79,64 @@ public class Main {
         id ++;
         funcionarios.add(new Funcionario(id, "Joaniza Nunes", 951753));
 
+        id = 100;
+        ArrayList<Lotacao> lotacoes = new ArrayList<Lotacao>();
+        Calendar dataInicial, dataFinal;
+        dataInicial = Calendar.getInstance();
+        dataFinal = Calendar.getInstance();
+
+        dataInicial.set(2019, 1, 1);
+
+        dataFinal.set(2019, 10, 12);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(0), departamentos.get(0), funcionarios.get(0)));
+        id ++;
+
+        dataFinal.set(2019,2,22);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(1), departamentos.get(1), funcionarios.get(1)));
+        id ++;
+
+        dataFinal.set(2020,5,6);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(2), departamentos.get(2), funcionarios.get(2)));
+        id ++;
+
+        dataFinal.set(2019,8,21);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(0), departamentos.get(3), funcionarios.get(3)));
+        id ++;
+
+        dataFinal.set(2019,4,29);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(1), departamentos.get(0), funcionarios.get(4)));
+        id ++;
+
+        dataFinal.set(2019,4,20);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(2), departamentos.get(1), funcionarios.get(5)));
+        id ++;
+
+        dataFinal.set(2020,6,20);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(0), departamentos.get(2), funcionarios.get(6)));
+        id ++;
+
+        dataFinal.set(2019,6,20);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(1), departamentos.get(3), funcionarios.get(7)));
+        id ++;
+
+        dataFinal.set(2019,7,11);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(2), departamentos.get(0), funcionarios.get(8)));
+        id ++;
+
+        dataFinal.set(2019,9,21);
+        lotacoes.add(new Lotacao(id, dataInicial.getTime(), dataFinal.getTime(),
+                cargos.get(0), departamentos.get(1), funcionarios.get(9)));
+
+
         try {
             for (Cargo cargo : cargos){
                 insertCargo.insert(cargo);
@@ -83,6 +146,9 @@ public class Main {
             }
             for (Funcionario funcionario : funcionarios){
                 insertFuncionario.insert(funcionario);
+            }
+            for (Lotacao lotacao : lotacoes){
+                insertLotacao.insert(lotacao);
             }
         } catch (Exception e) {
             e.printStackTrace();

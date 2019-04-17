@@ -13,8 +13,12 @@ public class CriarTabelaLotacao extends PersistenciaJdbc{
                 "ID LONG NOT NULL PRIMARY KEY, \n" +
                 "DATA_INICIAL DATE NOT NULL, \n" +
                 "DATA_FINAL DATE NOT NULL, \n" +
-                "FOREIGN KEY (ID) REFERENCES  DEPARTAMENTOS(ID), \n" +
-                "FOREIGN KEY (ID) REFERENCES CARGOS(ID), \n" +
+                "IDDEPART LONG NOT NULL, \n" +
+                "IDCARGO LONG NOT NULL, \n" +
+                "IDFUNC LONG NOT NULL, \n" +
+                "FOREIGN KEY (IDDEPART) REFERENCES  DEPARTAMENTOS(ID), \n" +
+                "FOREIGN KEY (IDCARGO) REFERENCES CARGOS(ID), \n" +
+                "FOREIGN  KEY (IDFUNC) REFERENCES  FUNCIONARIOS(ID), \n" +
                 ")";
 
         stmt.executeUpdate(sql);
